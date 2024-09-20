@@ -12,10 +12,10 @@ This repository contains a comprehensive implementation of a text summarization 
 
 1. Clone the repository:
 2. Create and activate a virtual environment
-3. pip install -r requirements.txt
-4. run main.py for training and saving the fine tuned model
+3. `pip install -r requirements.txt`
+4. `python main.py` for training and saving the fine tuned model
 6. Start the FastAPI server: `uvicorn app:app --reload`
 7. Start the Streamlit app in a new terminal: `streamlit run streamlit_app.py`
-8. Open your browser and go to http://localhost:8501 to access the Streamlit app.
+8. Open your browser and go to `http://localhost:8501` to access the Streamlit app.
 
  
