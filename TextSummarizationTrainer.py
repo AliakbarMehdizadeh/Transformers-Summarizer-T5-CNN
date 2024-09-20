@@ -11,12 +11,12 @@ class TextSummarizationTrainer:
         train_dataset = self.dataset['train']
 
         # Example: Select a subset of the training dataset (first `subset_size` examples)
-        self.dataset['train'] = train_dataset.select(range(10000))
+        #self.dataset['train'] = train_dataset.select(range(10000))
 
         # Example: Filter the training dataset to keep only examples with articles shorter than `max_article_length`
-        self.dataset['train'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
-        self.dataset['validation'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
-        self.dataset['test'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
+        #self.dataset['train'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
+        #self.dataset['validation'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
+        #self.dataset['test'] = train_dataset.filter(lambda x: len(x['article'].split()) < 1000)
 
         self.metric = load("bleu")
 
@@ -57,7 +57,6 @@ class TextSummarizationTrainer:
             learning_rate=learning_rate,
             weight_decay=0.01,
             evaluation_strategy="epoch",
-            fp16=True  # Enable mixed precision to save memory
         )
 
         model = T5ForConditionalGeneration.from_pretrained(self.model_name)
