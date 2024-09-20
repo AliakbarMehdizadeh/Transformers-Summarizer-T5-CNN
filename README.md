@@ -1,12 +1,15 @@
 # Text Summarizer Using T5 Fine Tuned on CNN/DailyMail Dataset
 
-This repository contains a comprehensive implementation of a text summarization model using the T5 (Text-To-Text Transfer Transformer) architecture. The goal of this project is to build a system that can generate concise summaries from lengthy news articles, specifically using the CNN/DailyMail dataset.
+This repository contains an implementation of a text summarization model based on the T5 (Text-To-Text Transfer Transformer) architecture. The primary goal of this project is to develop an efficient system capable of generating concise, human-readable summaries from lengthy news articles, making it easier to digest key information. This project specifically utilizes the CNN/DailyMail dataset, which is widely used for training models on the task of summarizing long-form text into brief highlights.
 
 ### Key Features:
 
 1. Model Architecture: This project leverages the T5 model, a transformer-based architecture designed for various text generation tasks, including summarization. The model is trained to convert a long text input (news article) into a concise output (summary).
 2. Dataset: The model is trained on the CNN/DailyMail dataset, which consists of news articles and their respective highlights, making it an ideal dataset for summarization tasks.
 3. API Integration: An API is created for real-world use, allowing users to send documents or text inputs and receive summarized versions. This API is built using Flask (or FastAPI/Streamlit depending on your preference) for easy integration into applications.
+
+   ![Sample Output](sample_usage.png)
+
 
 ### Usage
 
